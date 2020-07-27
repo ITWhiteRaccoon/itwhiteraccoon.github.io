@@ -1,0 +1,63 @@
+{
+  "masterPicture": "public/raccoon.svg",
+  "iconsPath": "/",
+  "design": {
+    "ios": {
+      "pictureAspect": "backgroundAndMargin",
+      "backgroundColor": "#ffffff",
+      "margin": "14%",
+      "assets": {
+        "ios6AndPriorIcons": false,
+        "ios7AndLaterIcons": true,
+        "precomposedIcons": false,
+        "declareOnlyDefaultIcon": true
+      },
+      "appName": "Edu Andrade"
+    },
+    "desktopBrowser": {
+      "design": "raw"
+    },
+    "windows": {
+      "pictureAspect": "noChange",
+      "backgroundColor": "#464655",
+      "onConflict": "override",
+      "assets": {
+        "windows80Ie10Tile": false,
+        "windows10Ie11EdgeTiles": {
+          "small": false,
+          "medium": true,
+          "big": true,
+          "rectangle": true
+        }
+      },
+      "appName": "Edu Andrade"
+    },
+    "androidChrome": {
+      "pictureAspect": "shadow",
+      "themeColor": "#464655",
+      "manifest": {
+        "name": "Edu Andrade",
+        "display": "standalone",
+        "orientation": "notSet",
+        "onConflict": "override",
+        "declared": true
+      },
+      "assets": {
+        "legacyIcon": false,
+        "lowResolutionIcons": false
+      }
+    },
+    "safariPinnedTab": {
+      "pictureAspect": "blackAndWhite",
+      "threshold": 92.65625,
+      "themeColor": "#464655"
+    }
+  },
+  "settings": {
+    "scalingAlgorithm": "Mitchell",
+    "errorOnImageTooSmall": false,
+    "readmeFile": false,
+    "htmlCodeFile": true,
+    "usePathAsIs": false
+  }
+}
