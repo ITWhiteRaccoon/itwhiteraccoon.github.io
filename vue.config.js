@@ -6,8 +6,6 @@ module.exports = {
 		});
 	},
 
-	outputDir: '/',
-
 	transpileDependencies: [
 		'vuetify'
 	]

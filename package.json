@@ -2,10 +2,13 @@
   "name": "itwhiteraccoon.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://itwhiteraccoon.github,io/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
     "@mdi/js": "^5.4.45",
