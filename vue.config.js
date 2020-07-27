@@ -6,7 +6,7 @@ module.exports = {
 		});
 	},
 
-	outputDir: 'docs',
+	outputDir: '/',
 
 	transpileDependencies: [
 		'vuetify'
