@@ -1,13 +1,12 @@
-import Vue from 'vue'
-import Vuesax from 'vuesax'
+import Vue from 'vue';
 
-import 'vuesax/dist/vuesax.css'
+import App from './App.vue';
 
-import App from './App.vue'
+import vuetify from './plugins/vuetify';
 
-Vue.config.productionTip = false
-Vue.use(Vuesax)
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+	vuetify,
+	render: h => h(App)
+}).$mount('#app');
