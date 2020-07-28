@@ -2,7 +2,7 @@
   "name": "itwhiteraccoon.github.io",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://itwhiteraccoon.github,io/",
+  "homepage": "https://eduandrade.dev/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
