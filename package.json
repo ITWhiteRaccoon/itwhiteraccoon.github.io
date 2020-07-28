@@ -8,7 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "predeploy": "npm run build",
-    "deploy": "gen gitignore:nodeuserpage --dest ./dist && gh-pages -b master -d dist"
+    "deploy": "gh-pages -b master -d dist"
   },
   "dependencies": {
     "@mdi/js": "^5.4.45",
