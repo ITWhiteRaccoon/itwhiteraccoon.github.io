@@ -3,7 +3,7 @@
 		<v-container>
 			<v-row align="stretch" justify="center" no-gutters>
 				<v-col sm="5" md="4" xl="3">
-					<v-card dark tile flat>
+					<v-card dark tile flat height="100%">
 						<v-container>
 							<v-list class="text-center">
 								<v-list-item>
@@ -17,22 +17,26 @@
 								</v-list-item>
 								<v-list-item>
 									<v-list-item-content>
-										<v-list-item-title class="title">Eduardo Cardoso de Andrade</v-list-item-title>
-										<v-list-item-subtitle>Estudante de Ciência da Computação</v-list-item-subtitle>
+										<v-list-item-title class="title text-h5">Eduardo Cardoso de Andrade
+										</v-list-item-title>
+										<v-list-item-subtitle class="body-1">Estudante de Ciência da Computação
+										</v-list-item-subtitle>
 									</v-list-item-content>
 								</v-list-item>
 							</v-list>
 							<div v-for="section in contact" :key="section.title">
-								<v-subheader>{{section.title}}</v-subheader>
+								<v-subheader class="text-h6">{{section.title}}</v-subheader>
 								<v-divider></v-divider>
-								<v-list dense shaped>
-									<v-list-item v-for="sectionItem in section.data" :key="sectionItem.title" link>
+								<v-list shaped>
+									<v-list-item :href="sectionItem.link" v-for="sectionItem in section.data"
+									             :key="sectionItem.title" link>
 										<v-list-item-icon>
 											<v-icon>{{sectionItem.icon}}</v-icon>
 										</v-list-item-icon>
 										<v-list-item-content>
-											<v-list-item-title>{{sectionItem.title}}</v-list-item-title>
-											<v-list-item-subtitle>{{sectionItem.subtitle}}</v-list-item-subtitle>
+											<v-list-item-title class="body-1">{{sectionItem.title}}</v-list-item-title>
+											<v-list-item-subtitle class="body-2">{{sectionItem.subtitle}}
+											</v-list-item-subtitle>
 										</v-list-item-content>
 									</v-list-item>
 								</v-list>
@@ -41,7 +45,7 @@
 					</v-card>
 				</v-col>
 				<v-col sm="7" md="8" xl="7">
-					<v-sheet color="grey lighten-2" height="100%">
+					<v-sheet color="grey lighten-2" height="100%" max-width="800">
 						<v-container>
 							<v-row dense>
 								<v-col>
@@ -66,11 +70,17 @@
 																</span>
 															</v-card-title>
 															<v-divider></v-divider>
-															<v-card-subtitle>
-																<div v-for="item in sectionItem.position"></div>
-															</v-card-subtitle>
 															<v-list dense>
-																<v-list-item></v-list-item>
+																<v-list-item v-for="loc in sectionItem.locations">
+																	<v-list-item-content>{{loc.title}}
+																		<ul>
+																			<li class="body-2"
+																			    v-for="activity in loc.activities">
+																				{{activity}}
+																			</li>
+																		</ul>
+																	</v-list-item-content>
+																</v-list-item>
 															</v-list>
 														</v-card>
 													</v-timeline-item>
@@ -118,7 +128,7 @@
 						{
 							title: 'LinkedIn',
 							subtitle: '/EduardoCAndrade',
-							link: 'http://linkedin.com/in/eduardocandrade/',
+							link: 'https://linkedin.com/in/eduardocandrade/',
 							icon: mdiLinkedin
 						},
 						{
@@ -144,7 +154,7 @@
 					data: [
 						{
 							title: 'PUCRS',
-							location: [{
+							locations: [{
 								title: 'Bacharelado em Ciência da Computação',
 								years: '2017-2023'
 							}]
@@ -158,7 +168,7 @@
 						{
 							title: 'Banrisul',
 							position: 'Estagiário',
-							location: [{
+							locations: [{
 								title: 'Unidade de Desenvolvimento de Software',
 								years: '2019 - Atual',
 								activities: ['Desenvolvimento Front End usando HTML5, JavaScript e CSS',
@@ -169,7 +179,7 @@
 							title: 'TRE-RS',
 							position: 'Estagiário',
 							years: '2016 - 2018',
-							location: [
+							locations: [
 								{
 									title: 'Seção de Orientação e Suporte em TI',
 									activities: ['Configuração de máquinas',
@@ -197,7 +207,7 @@
 
 <style lang="scss">
 	.v-application {
-		background : rgb(238, 174, 202);
-		background : linear-gradient(180deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%) !important;
+		background : rgb(148, 187, 233);
+		background : linear-gradient(180deg, rgba(148, 187, 233, 1) 0%, rgba(238, 174, 202, 1) 100%) !important;
 	}
 </style>
