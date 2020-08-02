@@ -3,46 +3,7 @@
 		<v-container>
 			<v-row align="stretch" justify="center" no-gutters>
 				<v-col sm="5" md="4" xl="3">
-					<v-card dark tile flat height="100%">
-						<v-container>
-							<v-list class="text-center">
-								<v-list-item>
-									<v-row justify="space-around">
-										<v-avatar size="160" color="grey lighten-1">
-											<v-avatar size="150">
-												<v-img src="./assets/SquareProfile.jpg"></v-img>
-											</v-avatar>
-										</v-avatar>
-									</v-row>
-								</v-list-item>
-								<v-list-item>
-									<v-list-item-content>
-										<v-list-item-title class="title text-h5">Eduardo Cardoso de Andrade
-										</v-list-item-title>
-										<v-list-item-subtitle class="body-1">Estudante de Ciência da Computação
-										</v-list-item-subtitle>
-									</v-list-item-content>
-								</v-list-item>
-							</v-list>
-							<div v-for="section in contact" :key="section.title">
-								<v-subheader class="text-h6">{{section.title}}</v-subheader>
-								<v-divider></v-divider>
-								<v-list shaped>
-									<v-list-item :href="sectionItem.link" v-for="sectionItem in section.data"
-									             :key="sectionItem.title" link>
-										<v-list-item-icon>
-											<v-icon>{{sectionItem.icon}}</v-icon>
-										</v-list-item-icon>
-										<v-list-item-content>
-											<v-list-item-title class="body-1">{{sectionItem.title}}</v-list-item-title>
-											<v-list-item-subtitle class="body-2">{{sectionItem.subtitle}}
-											</v-list-item-subtitle>
-										</v-list-item-content>
-									</v-list-item>
-								</v-list>
-							</div>
-						</v-container>
-					</v-card>
+					<EduSidebar :listed-sections="contact" :title="title"></EduSidebar>
 				</v-col>
 				<v-col sm="7" md="8" xl="7">
 					<v-sheet color="grey lighten-2" height="100%" max-width="800">
@@ -100,18 +61,24 @@
 
 <script>
 	import {mdiBriefcase, mdiEmail, mdiGithub, mdiLinkedin, mdiMap, mdiSchool, mdiTranslate} from '@mdi/js';
+	import EduSidebar from './components/EduSidebar';
+
 
 	require('typeface-quicksand');
 	export default {
 		name: 'App',
 
-		components: {},
+		components: {EduSidebar},
 
 		data: () => ({
-
+			title: {
+				img: 'img/SquareProfile.jpg',
+				name: 'Eduardo Cardoso de Andrade',
+				occupation: 'Estudante de Ciência da Computação'
+			},
 			contact: [
 				{
-					title: 'Contato',
+					section: 'Contato',
 					data: [
 						{
 							title: 'E-Mail',
@@ -140,7 +107,7 @@
 					]
 				},
 				{
-					title: 'Idiomas',
+					section: 'Idiomas',
 					data: [
 						{title: 'Português', subtitle: 'Nativo', icon: mdiTranslate},
 						{title: 'Inglês', subtitle: 'Fluente', icon: mdiTranslate}
