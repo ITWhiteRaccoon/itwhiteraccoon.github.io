@@ -1,6 +1,7 @@
 # Portfolio
 
 ## Project setup
+#### Install dependencies
 ```
 npm install
 ```
