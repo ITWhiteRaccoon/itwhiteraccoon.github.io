@@ -1,5 +1,5 @@
 <template>
-	<v-card dark tile flat height="100%" :class="($vuetify.breakpoint.xs)?'rounded-t':'rounded-l'">
+	<v-card dark tile flat height="100%" :class="($vuetify.breakpoint.xs)?'rounded-t-lg':'rounded-l-lg'">
 		<v-container>
 			<v-list class="text-center">
 				<v-list-item>
@@ -14,26 +14,26 @@
 				<v-list-item>
 					<v-list-item-content>
 						<v-list-item-title class="title text-h5">
-							{{title.name}}
+							{{ title.name }}
 						</v-list-item-title>
 						<v-list-item-subtitle class="body-1">
-							{{title.occupation}}
+							{{ title.occupation }}
 						</v-list-item-subtitle>
 					</v-list-item-content>
 				</v-list-item>
 			</v-list>
 			<div v-for="item in listedSections" :key="item.section">
-				<v-subheader class="text-h6">{{item.section}}</v-subheader>
+				<v-subheader class="text-h6">{{ item.section }}</v-subheader>
 				<v-divider></v-divider>
 				<v-list shaped>
 					<v-list-item :href="sectionItem.link" v-for="sectionItem in item.data" :key="sectionItem.title"
-					             link>
+								 link>
 						<v-list-item-icon>
-							<v-icon>{{sectionItem.icon}}</v-icon>
+							<v-icon>{{ sectionItem.icon }}</v-icon>
 						</v-list-item-icon>
 						<v-list-item-content>
-							<v-list-item-title class="body-1">{{sectionItem.title}}</v-list-item-title>
-							<v-list-item-subtitle class="body-2">{{sectionItem.subtitle}}
+							<v-list-item-title class="body-1">{{ sectionItem.title }}</v-list-item-title>
+							<v-list-item-subtitle class="body-2">{{ sectionItem.subtitle }}
 							</v-list-item-subtitle>
 						</v-list-item-content>
 					</v-list-item>
@@ -44,14 +44,14 @@
 </template>
 
 <script>
-	export default {
-		name: 'EduSidebar',
-		props: {
-			listedSections: [],
-			sidedIconSections: [],
-			title: {}
-		}
-	};
+export default {
+	name: 'EduSidebar',
+	props: {
+		listedSections: [],
+		sidedIconSections: [],
+		title: {}
+	}
+};
 </script>
 
 <style scoped>

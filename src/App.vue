@@ -7,7 +7,7 @@
 				</v-col>
 				<v-col sm="7" md="8" xl="7">
 					<v-sheet color="grey lighten-2" height="100%"
-							 :class="($vuetify.breakpoint.xs)?'rounded-b':'rounded-r'">
+							 :class="($vuetify.breakpoint.xs)?'rounded-b-lg':'rounded-r-lg'">
 						<v-container>
 							<v-row dense>
 								<v-col>
