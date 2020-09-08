@@ -3,7 +3,7 @@ module.exports = {
 		'plugin:vue/base'
 	],
 	rules: {
-		'vue/script-indent': ['error', 'tab', {'baseIndent': 1, 'switchCase': 1}],
+		'vue/script-indent': 'off',
 		'semi': ['error', 'always']
 	}
 };

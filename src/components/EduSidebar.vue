@@ -1,10 +1,10 @@
 <template>
-	<v-card dark tile flat height="100%">
+	<v-card dark tile flat height="100%" :class="($vuetify.breakpoint.xs)?'rounded-t':'rounded-l'">
 		<v-container>
 			<v-list class="text-center">
 				<v-list-item>
 					<v-row justify="space-around">
-						<v-avatar size="160" color="grey lighten-1">
+						<v-avatar size="160" color="grey lighten-2">
 							<v-avatar size="150">
 								<v-img :src="require(`@/assets/${title.img}`)"></v-img>
 							</v-avatar>
