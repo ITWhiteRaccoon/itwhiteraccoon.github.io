@@ -141,11 +141,20 @@ export default {
 				icon: mdiBriefcase,
 				data: [
 					{
+						title: 'PUCRS/HP',
+						position: 'Estagiário',
+						locations: [{
+							title: 'Laboratório de Inovação em Software',
+							years: '2020 - Atual',
+							activities: ['Desenvolvimento e Pesquisa']
+						}]
+					},
+					{
 						title: 'Banrisul',
 						position: 'Estagiário',
 						locations: [{
 							title: 'Unidade de Desenvolvimento de Software',
-							years: '2019 - Atual',
+							years: '2019 - 2020',
 							activities: ['Desenvolvimento Front End usando HTML5, JavaScript e CSS',
 								'Desenvolvimento Back End usando C# e Oracle SQL']
 						}]
